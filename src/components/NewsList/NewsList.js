@@ -13,13 +13,13 @@ class NewsList extends Component {
     render() {
 
         const news = this.props.news.map(n => (
-            <NewsItem title={n.title} />
+            <NewsItem news={n} />
         ))
 
         if (news.length === 0) {
             let arr = []
             for(let i = 0; i < 6; i++) {
-                arr.push((<NewsItem showSkeleton title={""} />))
+                arr.push((<NewsItem showSkeleton />))
             }
 
             return (

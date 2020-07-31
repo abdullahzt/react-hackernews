@@ -8,6 +8,13 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease-in-out;
     padding: 10px;
+    text-align: left;
+}
+
+.item h1,
+h3 {
+    padding: 0;
+    margin: 0px 10px;
 }
 
 .item:hover {
@@ -18,11 +25,41 @@
 
 .item h1 {
     font-size: 27px;
-    text-align: left;
-    padding: 0;
-    margin: 0px 10px;
 }
 
 .skeleton {
     margin-bottom: 10px;
+}
+
+span {
+    color: darkgrey;
+    font-style: italic;
+}
+
+.container {
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details {
+    opacity: 0;
+    transition: all 0.3s linear;
+    min-height: 0;
+}
+
+.details * {
+    font-weight: 500;
+    color: darkgrey;
+}
+
+.item:hover .details {
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+    .details {
+        opacity: 1;
+    }
 }
