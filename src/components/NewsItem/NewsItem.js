@@ -1,11 +1,11 @@
 import React from 'react';
 import './NewsItem.css'
 
-const NewsItem = () => {
+const NewsItem = ({ title }) => {
 
     return (
         <div className="item" >
-            <h1>Data</h1>
+            <h1>{title}</h1>
         </div>
     )
 
