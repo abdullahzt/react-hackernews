@@ -16,11 +16,27 @@ class NewsList extends Component {
             <NewsItem title={n.title} />
         ))
 
-        return (
-            <div>
-                {news}    
-            </div>
-        )
+        if (news.length === 0) {
+            let arr = []
+            for(let i = 0; i < 6; i++) {
+                arr.push((<NewsItem showSkeleton title={""} />))
+            }
+
+            return (
+                <div>
+                    {arr}
+                </div>
+            )
+        } else {
+            
+            return (
+                <div>
+                    {news}    
+                </div>
+            )
+
+        }
+
     }
 
 }
