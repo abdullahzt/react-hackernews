@@ -1,0 +1,24 @@
+.item {
+    width: 80vw;
+    background-color: #eee;
+    margin: 0 auto;
+    min-height: 120px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+    padding: 10px;
+}
+
+.item:hover {
+    width: 82vw;
+    min-height: 125px;
+    margin-top: 17.5px;
+}
+
+.item h1 {
+    font-size: 27px;
+    text-align: left;
+    padding: 0;
+    margin: 0px 10px;
+}
