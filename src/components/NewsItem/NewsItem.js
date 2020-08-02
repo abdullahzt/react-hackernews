@@ -4,8 +4,12 @@ import Skeleton from 'react-loading-skeleton';
 
 const NewsItem = ({ news, showSkeleton }) => {
 
+    function itemTapped(e) {
+        window.open(news.url, "_blank")
+    }   
+
     return (
-        <div className="item" >
+        <div onClick={itemTapped} className="item" >
             {news && (
                 <div className="container" >
                     <h1>{news.title} <span className="author">~ {news.author}</span></h1>
